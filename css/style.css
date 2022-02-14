@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+:root {
+  --black: #0e0e0d;
+  --black-alpha: #0e0e0d77;
+  /* --white: #f3eee2; */
+  --white: #bfbfbf;
+  --white-alpha: #f3eee219;
+  --red: #eb2724;
+  --orange: #eb8124;
+  --yellow: #eaaf2a;
+  --green: #6a9e4f;
+  --blue: #1d7fb1;
+  --purple: #6e0074;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 0.2px;
+  background-color: var(--black);
+}
+
+.title {
+  font-size: 52px;
+  text-align: center;
+  padding-top: 33px;
+  /* margin-bottom: -380px; */
+}
+
+.composition {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  /* transform: scale(0.9); */
+}
+
+.constellation {
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--white);
+  cursor: pointer;
+}
+
+.constellation:after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+.constellation-svg {
+  position: absolute;
+  transform: scale(0.9);
+}
+
+.constellation-title {
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+
+.star {
+  fill: var(--red);
+}
+
+.line {
+  fill: none;
+  stroke: var(--white-alpha);
+  stroke-miterlimit: 10;
+  stroke-width: 5;
+  visibility: hidden;
+}
+
+.credits {
+  size: 14px;
+  letter-spacing: 3px;
+  padding: 20px;
+}
+
+@media (min-width: 575.98px) {
+  .constellation {
+    width: 50%;
+  }
+  .title {
+    font-size: 52px;
+  }
+  .credits {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .constellation {
+    width: 33.333%;
+  }
+  .title {
+    font-size: 63px;
+  }
+  .credits {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .constellation {
+    width: 25%;
+  }
+  .title {
+    font-size: 73px;
+  }
+  .credits {
+    font-size: 18px;
+  }
+}
